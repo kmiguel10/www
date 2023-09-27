@@ -1,6 +1,6 @@
 import React from "react";
 import Base from "../components/layouts/base";
-import ProfileHeader from "../components/header";
+import ProfileHeader from "../components/pages/header";
 import ContainerLayout from "../components/layouts/container";
 
 const page = () => {

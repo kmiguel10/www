@@ -1,7 +1,8 @@
 import Base from "./components/layouts/base";
 
-import ProfileHeader from "./components/header";
+import ProfileHeader from "./components/pages/header";
 import ContainerLayout from "./components/layouts/container";
+import Contents from "./components/pages/contents";
 
 export default function Home() {
   return (
@@ -9,7 +10,7 @@ export default function Home() {
       <Base>
         <ContainerLayout className="flex flex-col space-y-4">
           <ProfileHeader />
-          <div>Summaries</div>
+          <Contents />
         </ContainerLayout>
       </Base>
     </>

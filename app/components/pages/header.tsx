@@ -1,6 +1,6 @@
 import React from "react";
 import ProfileAvatar from "./profile-avatar";
-import Button from "./button";
+import Button from "../ui/button";
 
 const ProfileHeader = () => {
   return (
