@@ -9,6 +9,8 @@ interface Props {
   symbol: ReactNode;
   name: string;
   description: string;
+  tags?: ReactNode[];
+  button?: ReactNode;
 }
 
 const ContentDisplay = ({
@@ -17,6 +19,8 @@ const ContentDisplay = ({
   symbol,
   name,
   description,
+  tags,
+  button,
 }: Props) => {
   return (
     <div
@@ -47,6 +51,18 @@ const ContentDisplay = ({
       </div>
       {/** Body */}
       <div className="w-full grow">{children}</div>
+      {/* Footer */}
+      {tags || button ? (
+        <div className="flex h-10 items-center justify-between border-t border-gray-6 p-2">
+          {/* Tags */}
+          <div className="flex items-center space-x-1">
+            {tags ? tags.map((tag) => tag) : null}
+          </div>
+
+          {/* Button */}
+          {button}
+        </div>
+      ) : null}
     </div>
   );
 };
