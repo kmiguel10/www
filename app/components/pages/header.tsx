@@ -1,7 +1,7 @@
 import React from "react";
 import ProfileAvatar from "./profile-avatar";
 import Button from "../ui/button";
-import { Github, Twitter } from "lucide-react";
+import { Github, Twitter, Linkedin } from "lucide-react";
 
 const ProfileHeader = () => {
   return (
@@ -24,12 +24,17 @@ const ProfileHeader = () => {
       <div className="hidden space-x-2 md:flex">
         <Button
           intent="primary"
-          href="https://twitter.com/kemmgl10"
-          leftIcon={<Twitter />}
+          href="https://www.linkedin.com/in/kent-miguel/"
+          leftIcon={<Linkedin />}
+          newTab
         >
-          Twitter
+          LinkedIn
         </Button>
-        <Button href="https://github.com/kmiguel10" leftIcon={<Github />}>
+        <Button
+          href="https://github.com/kmiguel10"
+          leftIcon={<Github />}
+          newTab
+        >
           GitHub
         </Button>
       </div>

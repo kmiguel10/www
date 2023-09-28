@@ -11,7 +11,7 @@ const MySocials = () => {
       name="Connect"
       description="Follow me on my socials"
       button={
-        <Button href="/resume" leftIcon={<FileText />}>
+        <Button size="sm" href="/resume" rightIcon={<FileText />}>
           Resume
         </Button>
       }
