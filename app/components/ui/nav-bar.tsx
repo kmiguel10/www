@@ -29,11 +29,12 @@ const NavBar = () => {
             <li>
               <Link href="/">Home</Link>
             </li>
-            <li>
-              <Link href="/about">About Me</Link>
-            </li>
+
             <li>
               <Link href="/resume">Resume</Link>
+            </li>
+            <li>
+              <Link href="/about">About Me</Link>
             </li>
           </ul>
         </div>
@@ -45,11 +46,12 @@ const NavBar = () => {
             <li>
               <Link href="/">Home</Link>
             </li>
-            <li>
-              <Link href="/about">About Me</Link>
-            </li>
+
             <li>
               <Link href="/resume">Resume</Link>
+            </li>
+            <li>
+              <Link href="/about">About Me</Link>
             </li>
           </ul>
         </div>
