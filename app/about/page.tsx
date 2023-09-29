@@ -2,7 +2,7 @@ import React from "react";
 import Base from "../components/layouts/base";
 import ProfileHeader from "../components/pages/header";
 import ContainerLayout from "../components/layouts/container";
-import InProgressImage from "../../public/aboutme-option10.webp";
+import InProgressImage from "../../public/aboutme-option9.webp";
 import Image from "next/image";
 
 const page = () => {
