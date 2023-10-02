@@ -1,12 +1,12 @@
 import React from "react";
-import ProfileHeader from "../components/pages/header";
+import ProfileHeader from "../components/ui/header";
 import Base from "../components/layouts/base";
 import ContainerLayout from "../components/layouts/container";
 import Image from "next/image";
 import profile from "../../public/profile.jpeg";
-import Contents from "../components/pages/contents";
-import ResumeContent from "../components/pages/resume/resume-content";
-import Skills from "../components/pages/resume/skills";
+import Contents from "../components/home/contents";
+import ResumeContent from "./components/resume-content";
+import Skills from "./components/skills";
 
 const page = () => {
   return (

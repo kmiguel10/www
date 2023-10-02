@@ -1,6 +1,6 @@
 import React from "react";
 import ProfileAvatar from "./profile-avatar";
-import Button from "../ui/button";
+import Button from "./button";
 import { Github, Twitter, Linkedin } from "lucide-react";
 
 const ProfileHeader = () => {
@@ -16,7 +16,7 @@ const ProfileHeader = () => {
             Kent Miguel
           </div>
           <span className="mt-0.5 text-sm text-gray-11 md:mt-1 md:text-base">
-            I am a fullstack developer
+            Full-stack Developer , web3 , blockchain
           </span>
         </div>
       </div>

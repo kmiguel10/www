@@ -1,8 +1,8 @@
 import Base from "./components/layouts/base";
 
-import ProfileHeader from "./components/pages/header";
+import ProfileHeader from "./components/ui/header";
 import ContainerLayout from "./components/layouts/container";
-import Contents from "./components/pages/contents";
+import Contents from "./components/home/contents";
 
 export default function Home() {
   return (
