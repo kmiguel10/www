@@ -13,7 +13,7 @@ const AboutMe = () => {
     >
       <div className="line-clamp-1 text-ellipsis text-sm text-gray-11 px-4 py-4">
         <p className="overflow-auto">
-          I am a full stack developer with experience in React.js and Vue.js. I
+          I am a full-stack developer with experience in React.js and Vue.js. I
           also have a strong interest in the blockchain technology and web3. I
           was a previous fullstack developer at Deloitte and I took a year off
           to travel in Europe. Now, I am looking for new job opportunities.
