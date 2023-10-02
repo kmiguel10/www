@@ -1,6 +1,6 @@
 import React from "react";
 import ProfileAvatar from "./profile-avatar";
-import Button from "../ui/button";
+import Button from "./button";
 import { Github, Twitter, Linkedin } from "lucide-react";
 
 const ProfileHeader = () => {

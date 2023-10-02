@@ -1,5 +1,5 @@
 import React from "react";
-import ContentDisplay from "../../layouts/content-display";
+import ContentDisplay from "../../components/layouts/content-display";
 import { Wand2 } from "lucide-react";
 
 const Skills = () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import ContentDisplay from "../../layouts/content-display";
+import ContentDisplay from "../../components/layouts/content-display";
 import { KanbanSquare } from "lucide-react";
 
 const ResumeContent = () => {
@@ -11,7 +11,7 @@ const ResumeContent = () => {
       description=""
     >
       <div className="grid grid-flow-row auto-rows-max flex-col overflow-hidden rounded-none border border-gray-6 bg-gray-2 ">
-        <div className="collapse collapse-arrow border-base-300 border border-gray-6 bg-gray-2">
+        <div className="collapse collapse-arrow">
           <input type="radio" name="my-accordion-2" checked={undefined} />
           <div className="collapse-title text-md md:rounded-2xl">
             <div className="flex w-full items-center md:flex-row md:justify-between">
@@ -44,7 +44,7 @@ const ResumeContent = () => {
             </ul>
           </div>
         </div>
-        <div className="collapse collapse-arrow border-base-300 border border-gray-6 bg-gray-2border border-gray-6 bg-gray-2">
+        <div className="collapse collapse-arrow border-t-2">
           <input type="radio" name="my-accordion-2" />
           <div className="collapse-title text-md">
             <div className="flex w-full items-center md:flex-row md:justify-between">
@@ -79,7 +79,7 @@ const ResumeContent = () => {
             </ul>
           </div>
         </div>
-        <div className="collapse collapse-arrow border-base-300 border border-gray-6 bg-gray-2">
+        <div className="collapse collapse-arrow border-t-2">
           <input type="radio" name="my-accordion-2" />
           <div className="collapse-title text-md">
             <div className="flex w-full items-center md:flex-row md:justify-between">
