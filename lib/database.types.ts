@@ -14,19 +14,49 @@ export interface Database {
           date: string | null
           distance: number | null
           id: number
+          month: number | null
           source: string | null
+          year: number | null
         }
         Insert: {
           date?: string | null
           distance?: number | null
           id: number
+          month?: number | null
           source?: string | null
+          year?: number | null
         }
         Update: {
           date?: string | null
           distance?: number | null
           id?: number
+          month?: number | null
           source?: string | null
+          year?: number | null
+        }
+        Relationships: []
+      }
+      running_monthly: {
+        Row: {
+          id: number
+          month: number
+          monthyear: number
+          total_distance: number
+          year: number
+        }
+        Insert: {
+          id?: number
+          month: number
+          monthyear: number
+          total_distance: number
+          year: number
+        }
+        Update: {
+          id?: number
+          month?: number
+          monthyear?: number
+          total_distance?: number
+          year?: number
         }
         Relationships: []
       }
