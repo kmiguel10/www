@@ -3,8 +3,11 @@ import Base from "./components/layouts/base";
 import ProfileHeader from "./components/ui/header";
 import ContainerLayout from "./components/layouts/container";
 import Contents from "./components/home/contents";
+import Running from "./components/home/running/running";
 
-export default function Home() {
+export const dynamic = "force-dynamic";
+
+export default async function Home() {
   return (
     <>
       <Base>

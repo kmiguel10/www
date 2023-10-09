@@ -3,6 +3,7 @@ import AboutMe from "./about-me";
 import MySocials from "./my-socials";
 import CodeFourArena from "./code-four-arena";
 import SpeedRun from "./speedrun";
+import Running from "./running/running";
 
 const Contents = () => {
   return (
@@ -11,6 +12,7 @@ const Contents = () => {
       <MySocials />
       <CodeFourArena />
       <SpeedRun />
+      <Running />
     </div>
   );
 };

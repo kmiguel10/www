@@ -10,6 +10,7 @@ const ProfileHeader = () => {
         {/* Avatara (desktop) */}
         <ProfileAvatar className="mr-4 hidden md:block" size={56} />
         {/* Avatara (mobile) TODO */}
+        <ProfileAvatar className="mr-2 md:hidden" size={40} />
         <div>
           <div className="text-base font-semibold md:text-2xl">
             {" "}
@@ -31,6 +32,28 @@ const ProfileHeader = () => {
           LinkedIn
         </Button>
         <Button
+          href="https://github.com/kmiguel10"
+          leftIcon={<Github />}
+          newTab
+        >
+          GitHub
+        </Button>
+      </div>
+      <div className="mt-4 flex w-full space-x-2 md:hidden">
+        {" "}
+        <Button
+          size="md"
+          intent="primary"
+          className="w-full"
+          href="https://www.linkedin.com/in/kent-miguel/"
+          leftIcon={<Linkedin />}
+          newTab
+        >
+          LinkedIn
+        </Button>
+        <Button
+          size="md"
+          className="w-full"
           href="https://github.com/kmiguel10"
           leftIcon={<Github />}
           newTab
