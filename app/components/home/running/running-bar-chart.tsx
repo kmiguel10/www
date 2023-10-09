@@ -127,7 +127,7 @@ export default function RunningBarChart({
           : "No data"}
       </div>
       {/** Will need to adjust height to 100% after completion of heatmap */}
-      <ResponsiveContainer className="mt-2" width="100%" height={200}>
+      <ResponsiveContainer className="mt-2" width="100%" height="100%">
         <BarChart
           data={data}
           margin={{ top: 0, left: 0, bottom: -14 }}

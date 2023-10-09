@@ -26,6 +26,7 @@ export default function RunningDetails({
 
   const handleUnitChange = () => {
     setUnitIndex((unitIndex + 1) % LENGTH_UNITS.length);
+    console.log(JSON.stringify(dailyData));
   };
 
   return (
@@ -51,7 +52,7 @@ export default function RunningDetails({
             {/* <BarChart /> */}
           </Tabs.Trigger>
           {/** Wrap in Icon button */}
-          <Tabs.Trigger value="heat-map " asChild>
+          <Tabs.Trigger value="heat-map" asChild>
             <IconButton
               size="sm"
               variant="ghost"
@@ -93,7 +94,10 @@ export default function RunningDetails({
         asChild
       >
         <div className={clsx(tabContentStyles)}>
-          <RunningHeatMap />
+          <RunningHeatMap
+            runningLogs={dailyData}
+            unit={LENGTH_UNITS[unitIndex]}
+          />
         </div>
       </Tabs.Content>
     </Tabs.Root>

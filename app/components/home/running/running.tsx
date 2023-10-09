@@ -40,7 +40,7 @@ const Running = async () => {
 
   return (
     <ContentDisplay
-      className="col-span-2 w-full min-[560px]:col-span-4"
+      className="h-64 col-span-2 w-full min-[560px]:col-span-4"
       name="Running"
       description="I run a lot"
       symbol={<Footprints />}
