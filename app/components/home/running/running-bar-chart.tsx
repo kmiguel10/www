@@ -18,7 +18,7 @@ export default function RunningBarChart({
   runMonthlyData,
   unit,
 }: {
-  runMonthlyData: MileageLog[];
+  runMonthlyData: MonthlyData[];
   unit: LengthUnit;
 }) {
   //20.43 is a precomputed value to fit the width when the unit is set to km.
@@ -32,7 +32,7 @@ export default function RunningBarChart({
   const [data, totalDays] = useMemo(() => {
     let totalDays = 0;
     const data = runMonthlyData.map((d) => {
-      const date = new Date(d.date);
+      const date = new Date(d.year, Number(d.date) - 1, 1);
       const utcDate = new Date(
         Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), 1)
       );

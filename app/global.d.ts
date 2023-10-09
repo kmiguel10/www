@@ -2,9 +2,10 @@ import { Database as DB } from "@/lib/database.types";
 
 declare global {
   type Database = DB;
-  type runMonthlyData = {
-    month: string;
-    distance: number;
+  type MonthlyData = {
+    date: string;
+    value: number;
+    year: number;
   };
 
   /**

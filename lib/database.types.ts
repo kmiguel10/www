@@ -9,56 +9,95 @@ export type Json =
 export interface Database {
   public: {
     Tables: {
-      running: {
+      likes: {
         Row: {
-          date: string
-          distance: number
+          created_at: string
           id: number
-          month: number | null
-          source: string | null
-          year: number | null
+          tweet_id: string
+          user_id: string
         }
         Insert: {
-          date: string
-          distance: number
-          id: number
-          month?: number | null
-          source?: string | null
-          year?: number | null
+          created_at?: string
+          id?: number
+          tweet_id: string
+          user_id: string
         }
         Update: {
-          date?: string
-          distance?: number
+          created_at?: string
           id?: number
-          month?: number | null
-          source?: string | null
-          year?: number | null
+          tweet_id?: string
+          user_id?: string
         }
-        Relationships: []
+        Relationships: [
+          {
+            foreignKeyName: "likes_tweet_id_fkey"
+            columns: ["tweet_id"]
+            referencedRelation: "tweets"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "likes_user_id_fkey"
+            columns: ["user_id"]
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          }
+        ]
       }
-      running_monthly: {
+      profiles: {
         Row: {
-          id: number
-          month: number
-          monthyear: number
-          total_distance: number
-          year: number
+          avatar_url: string
+          id: string
+          name: string
+          username: string
         }
         Insert: {
-          id?: number
-          month: number
-          monthyear: number
-          total_distance: number
-          year: number
+          avatar_url: string
+          id: string
+          name: string
+          username: string
         }
         Update: {
-          id?: number
-          month?: number
-          monthyear?: number
-          total_distance?: number
-          year?: number
+          avatar_url?: string
+          id?: string
+          name?: string
+          username?: string
         }
-        Relationships: []
+        Relationships: [
+          {
+            foreignKeyName: "profiles_id_fkey"
+            columns: ["id"]
+            referencedRelation: "users"
+            referencedColumns: ["id"]
+          }
+        ]
+      }
+      tweets: {
+        Row: {
+          created_at: string
+          id: string
+          title: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          title: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          title?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "tweets_user_id_fkey"
+            columns: ["user_id"]
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          }
+        ]
       }
     }
     Views: {

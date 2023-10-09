@@ -20,10 +20,11 @@ const Running = async () => {
     .order("year", { ascending: true })
     .order("month");
 
-  const runData: MileageLog[] =
+  const runData: MonthlyData[] =
     data?.map((run) => ({
       date: String(run.month),
       value: run.total_distance,
+      year: run.year,
     })) ?? [];
 
   //Fetch daily logs

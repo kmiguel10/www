@@ -85,6 +85,10 @@ const config: Config = {
     require("daisyui"),
     require("@tailwindcss/typography"),
     require("tailwindcss-animate"),
+    require("tailwindcss-percentage-width"),
+    require("@tailwindcss/aspect-ratio"),
+    require("windy-radix-palette"),
+    require("windy-radix-typography"),
   ],
   daisyui: {
     themes: ["winter"],

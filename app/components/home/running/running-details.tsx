@@ -15,7 +15,7 @@ export default function RunningDetails({
   runMonthlyData,
   dailyData,
 }: {
-  runMonthlyData: MileageLog[];
+  runMonthlyData: MonthlyData[];
   dailyData: MileageLog[];
 }) {
   const [unitIndex, setUnitIndex] = useState<number>(0);

@@ -14,6 +14,7 @@
     "@radix-ui/react-tooltip": "^1.0.7",
     "@supabase/auth-helpers-nextjs": "^0.8.1",
     "@supabase/supabase-js": "^2.38.0",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "lucide-react": "^0.279.0",
@@ -22,9 +23,11 @@
     "react-dom": "latest",
     "recharts": "^2.8.0",
     "tailwind-merge": "^1.14.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "tailwindcss-percentage-width": "^1.0.3"
   },
   "devDependencies": {
+    "@radix-ui/colors": "^3.0.0",
     "@tailwindcss/typography": "^0.5.10",
     "@types/node": "latest",
     "@types/react": "latest",
@@ -36,6 +39,8 @@
     "mini-css-extract-plugin": "^2.7.6",
     "postcss": "latest",
     "tailwindcss": "latest",
-    "typescript": "latest"
+    "typescript": "latest",
+    "windy-radix-palette": "^1.0.0",
+    "windy-radix-typography": "^0.2.1"
   }
 }
