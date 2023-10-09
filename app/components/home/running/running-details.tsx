@@ -38,7 +38,7 @@ export default function RunningDetails({
         <Tabs.List className="flex w-10 flex-col items-center space-y-2 p-2">
           {/** Wrap in Icon button */}
           <Tabs.Trigger value="bar-chart" asChild>
-            <Button
+            <IconButton
               size="sm"
               variant="ghost"
               role="tab"
@@ -47,12 +47,12 @@ export default function RunningDetails({
               aria-label="Running bar graph"
             >
               <BarChart />
-            </Button>
+            </IconButton>
             {/* <BarChart /> */}
           </Tabs.Trigger>
           {/** Wrap in Icon button */}
-          <Tabs.Trigger value="heat-map asChild">
-            {/* <Button
+          <Tabs.Trigger value="heat-map " asChild>
+            <IconButton
               size="sm"
               variant="ghost"
               role="tab"
@@ -61,22 +61,23 @@ export default function RunningDetails({
               aria-label="Running heatmap"
             >
               <Grid />
-            </Button> */}
+            </IconButton>
             {/* <Grid /> */}
           </Tabs.Trigger>
         </Tabs.List>
+        <div className="border-t border-gray-6 p-2">
+          <Tooltip content="Change units" side="left">
+            <IconButton
+              size="sm"
+              onClick={handleUnitChange}
+              aria-label="Change units"
+            >
+              <ArrowLeftRight />
+            </IconButton>
+          </Tooltip>
+        </div>
       </div>
-      <div className="border-t border-gray-6 p-2">
-        <Tooltip content="Change units" side="left">
-          <IconButton
-            size="sm"
-            onClick={handleUnitChange}
-            aria-label="Change units"
-          >
-            <ArrowLeftRight />
-          </IconButton>
-        </Tooltip>
-      </div>
+
       <Tabs.Content value="bar-chart" tabIndex={-1} asChild>
         <div className={clsx(tabContentStyles, "flex flex-col p-2")}>
           <RunningBarChart
@@ -85,7 +86,12 @@ export default function RunningDetails({
           />
         </div>
       </Tabs.Content>
-      <Tabs.Content value="heat-map" tabIndex={-1} asChild>
+      <Tabs.Content
+        value="heat-map"
+        className={tabContentStyles}
+        tabIndex={-1}
+        asChild
+      >
         <div className={clsx(tabContentStyles)}>
           <RunningHeatMap />
         </div>

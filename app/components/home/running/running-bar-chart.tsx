@@ -10,7 +10,7 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import Tooltip from "../../ui/tooltip";
+import Tooltip from "@components/ui/tooltip";
 import formatValueToPrecision from "@/lib/utils/formatValueToPrecision";
 import { Info } from "lucide-react";
 
@@ -126,6 +126,7 @@ export default function RunningBarChart({
             })} ${data[data.length - 1].date.getUTCFullYear()}`
           : "No data"}
       </div>
+      {/** Will need to adjust height to 100% after completion of heatmap */}
       <ResponsiveContainer className="mt-2" width="100%" height={200}>
         <BarChart
           data={data}
@@ -142,17 +143,19 @@ export default function RunningBarChart({
             tickLine={false}
             tickSize={4}
           />
-          <YAxis
-            orientation="right"
-            axisLine={false}
-            padding={{ top: 0, bottom: 0 }}
-            width={yAxisWidth}
-            tick={{ fontSize: 12, strokeWidth: 0 }}
-            tickFormatter={(value) => formatValueToPrecision(value, 1, true)}
-            tickCount={3}
-            tickLine={false}
-            tickSize={4}
-          />
+          {
+            <YAxis
+              orientation="right"
+              axisLine={false}
+              padding={{ top: 0, bottom: 0 }}
+              width={yAxisWidth}
+              tick={{ fontSize: 12, strokeWidth: 0 }}
+              tickFormatter={(value) => formatValueToPrecision(value, 1, true)}
+              tickCount={3}
+              tickLine={false}
+              tickSize={4}
+            />
+          }
           <RechartTooltip
             content={({ active, payload, label }) => {
               const monthName = label
