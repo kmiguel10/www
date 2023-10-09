@@ -2,22 +2,39 @@ import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 import RunningBarChart from "./running-bar-chart";
 import { Footprints } from "lucide-react";
-import ContentDisplay from "../layouts/content-display";
+import ContentDisplay from "../../layouts/content-display";
+import * as Tabs from "@radix-ui/react-tabs";
+import RunningDetails from "./running-details";
 
 export const dynamic = "force-dynamic";
 
-export default async function Running() {
+//**  Main component */
+
+const Running = async () => {
   const supabase = createServerComponentClient<Database>({ cookies });
+
+  //Fetch Monthly
   const { data } = await supabase
     .from("running_monthly")
     .select("year, month,total_distance")
     .order("year", { ascending: true })
     .order("month");
 
-  const runData =
+  const runData: MileageLog[] =
     data?.map((run) => ({
-      month: String(run.month),
-      distance: run.total_distance,
+      date: String(run.month),
+      value: run.total_distance,
+    })) ?? [];
+
+  //Fetch daily logs
+  const { data: dailyData } = await supabase
+    .from("running")
+    .select("date, distance");
+
+  const dailyRunData: MileageLog[] =
+    dailyData?.map((run) => ({
+      date: run.date,
+      value: run.distance,
     })) ?? [];
 
   return (
@@ -27,7 +44,9 @@ export default async function Running() {
       description="I run a lot"
       symbol={<Footprints />}
     >
-      <RunningBarChart runMonthData={runData} />
+      <RunningDetails runMonthlyData={runData} dailyData={dailyRunData} />
     </ContentDisplay>
   );
-}
+};
+
+export default Running;

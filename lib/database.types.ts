@@ -11,24 +11,24 @@ export interface Database {
     Tables: {
       running: {
         Row: {
-          date: string | null
-          distance: number | null
+          date: string
+          distance: number
           id: number
           month: number | null
           source: string | null
           year: number | null
         }
         Insert: {
-          date?: string | null
-          distance?: number | null
+          date: string
+          distance: number
           id: number
           month?: number | null
           source?: string | null
           year?: number | null
         }
         Update: {
-          date?: string | null
-          distance?: number | null
+          date?: string
+          distance?: number
           id?: number
           month?: number | null
           source?: string | null

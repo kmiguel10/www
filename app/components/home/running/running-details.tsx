@@ -1,0 +1,95 @@
+"use client";
+
+import * as Tabs from "@radix-ui/react-tabs";
+import RunningBarChart from "./running-bar-chart";
+import RunningHeatMap from "./running-heatmap";
+import clsx from "clsx";
+import Button from "@components/ui/button";
+import IconButton from "@components/ui/icon-button";
+import { ArrowLeftRight, BarChart, Grid } from "lucide-react";
+import { useState } from "react";
+import { LENGTH_UNITS } from "@/lib/constants/units";
+import Tooltip from "@components/ui/tooltip";
+
+export default function RunningDetails({
+  runMonthlyData,
+  dailyData,
+}: {
+  runMonthlyData: MileageLog[];
+  dailyData: MileageLog[];
+}) {
+  const [unitIndex, setUnitIndex] = useState<number>(0);
+
+  const tabContentStyles = "h-full grow overflow-hidden bg-gray-3";
+  const tabTriggerStyles =
+    "data-[state=active]:bg-gray-5 data-[state=active]:hover:bg-gray-5";
+
+  const handleUnitChange = () => {
+    setUnitIndex((unitIndex + 1) % LENGTH_UNITS.length);
+  };
+
+  return (
+    <Tabs.Root
+      className="flex h-full w-full"
+      defaultValue="bar-chart"
+      orientation="vertical"
+    >
+      <div className="flex h-full w-10 flex-col items-center justify-between border-r border-gray-6">
+        <Tabs.List className="flex w-10 flex-col items-center space-y-2 p-2">
+          {/** Wrap in Icon button */}
+          <Tabs.Trigger value="bar-chart" asChild>
+            <Button
+              size="sm"
+              variant="ghost"
+              role="tab"
+              className={tabTriggerStyles}
+              title="Bar graph"
+              aria-label="Running bar graph"
+            >
+              <BarChart />
+            </Button>
+            {/* <BarChart /> */}
+          </Tabs.Trigger>
+          {/** Wrap in Icon button */}
+          <Tabs.Trigger value="heat-map asChild">
+            {/* <Button
+              size="sm"
+              variant="ghost"
+              role="tab"
+              className={tabTriggerStyles}
+              title="Heatmap"
+              aria-label="Running heatmap"
+            >
+              <Grid />
+            </Button> */}
+            {/* <Grid /> */}
+          </Tabs.Trigger>
+        </Tabs.List>
+      </div>
+      <div className="border-t border-gray-6 p-2">
+        <Tooltip content="Change units" side="left">
+          <IconButton
+            size="sm"
+            onClick={handleUnitChange}
+            aria-label="Change units"
+          >
+            <ArrowLeftRight />
+          </IconButton>
+        </Tooltip>
+      </div>
+      <Tabs.Content value="bar-chart" tabIndex={-1} asChild>
+        <div className={clsx(tabContentStyles, "flex flex-col p-2")}>
+          <RunningBarChart
+            runMonthlyData={runMonthlyData}
+            unit={LENGTH_UNITS[unitIndex]}
+          />
+        </div>
+      </Tabs.Content>
+      <Tabs.Content value="heat-map" tabIndex={-1} asChild>
+        <div className={clsx(tabContentStyles)}>
+          <RunningHeatMap />
+        </div>
+      </Tabs.Content>
+    </Tabs.Root>
+  );
+}
