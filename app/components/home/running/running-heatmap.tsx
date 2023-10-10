@@ -319,6 +319,7 @@ const RunningFeatureDetailHeatmap: FC<RunningFeatureDetailHeatmapProps> = ({
                   day: "numeric",
                   month: "short",
                   year: "numeric",
+                  timeZone: "UTC", // Explicitly set the timezone to UTC
                 }
               )}
             </TooltipWithBounds>
