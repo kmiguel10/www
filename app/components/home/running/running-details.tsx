@@ -26,7 +26,6 @@ export default function RunningDetails({
 
   const handleUnitChange = () => {
     setUnitIndex((unitIndex + 1) % LENGTH_UNITS.length);
-    console.log(JSON.stringify(dailyData));
   };
 
   return (

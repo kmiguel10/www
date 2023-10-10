@@ -30,7 +30,8 @@ const Running = async () => {
   //Fetch daily logs
   const { data: dailyData } = await supabase
     .from("running")
-    .select("date, distance");
+    .select("date, distance")
+    .order("date", { ascending: true });
 
   const dailyRunData: MileageLog[] =
     dailyData?.map((run) => ({
