@@ -8,7 +8,7 @@ interface Props {
   className?: string;
 }
 
-const ContainerLayout = ({ children, className }: Props) => {
+const ContainerLayout = ({ children, className, ...rest }: Props) => {
   return (
     <div
       className={twMerge(
@@ -17,6 +17,7 @@ const ContainerLayout = ({ children, className }: Props) => {
           className
         )
       )}
+      {...rest}
     >
       {children}
     </div>
