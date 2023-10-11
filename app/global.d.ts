@@ -1,4 +1,6 @@
 import { Database as DB } from "@/lib/database.types";
+import { PageSlug } from "@/lib/types/site";
+import type { ReactNode } from "react";
 
 declare global {
   type Database = DB;
@@ -30,5 +32,19 @@ declare global {
     scalar: number;
     spaceBefore?: boolean;
     description?: string;
+  };
+
+  type NavBarProps = {
+    selected?: PageSlug;
+  };
+
+  export type SeoBaseProps = {
+    title?: string;
+    subtitle?: string;
+  };
+
+  type BaseLayoutProps = SeoBaseProps & {
+    pageSlug?: PageSlug;
+    children?: ReactNode;
   };
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import ContentDisplay from "../../components/layouts/content-display";
+import ContentDisplay from "@components/layouts/content-display";
 import { Wand2 } from "lucide-react";
 
 const Skills = () => {
@@ -10,7 +10,7 @@ const Skills = () => {
       name="Skills"
       description="Tech Stack I usually use"
     >
-      <div className="line-clamp-1 text-ellipsis text-sm text-gray-11 px-4 py-4">
+      <div className="text-sm text-gray-11 px-4 py-4">
         <ul className="list-disc px-4 overflow-auto">
           <li>
             Coding Languages : Solidity, Web3, Typescript, JavaScript (Next.js,

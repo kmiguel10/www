@@ -1,17 +1,18 @@
 import React, { ReactNode } from "react";
-import NavBar from "../ui/nav-bar";
+import SeoBase from "@components/layouts/seo-base";
+import NavBar from "@components/ui/nav-bar/nav-bar";
 
-interface Props {
-  children: ReactNode;
-}
-
-const Base = ({ children }: Props) => {
+export default function Base({
+  title,
+  subtitle,
+  pageSlug,
+  children,
+}: BaseLayoutProps) {
   return (
     <>
-      <NavBar />
+      <SeoBase title={title} subtitle={subtitle} />
+      <NavBar selected={pageSlug} />
       <main className="relative flex grow flex-col">{children}</main>
     </>
   );
-};
-
-export default Base;
+}
