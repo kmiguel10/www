@@ -12,7 +12,7 @@ const AboutMe = () => {
       description="Introduction"
     >
       <div className="line-clamp-1 text-ellipsis text-sm text-gray-11 px-4 py-4">
-        <p className="overflow-auto h-max">
+        <p className="overflow-auto h-full w-full">
           I am a full-stack developer with experience in React.js and Vue.js. I
           also have a strong interest in the blockchain technology and web3. I
           was a previous fullstack developer at Deloitte and I took a year off
