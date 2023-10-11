@@ -20,7 +20,7 @@ const MySocials = () => {
         </Button>
       }
     >
-      <div className="line-clamp-1 text-ellipsis text-sm text-gray-11 p-4">
+      <div className="text-sm text-gray-11 p-4">
         <p className="overflow-auto ">
           I am actively looking for job opportunities. My inbox is open and feel
           free to ask me anything!
