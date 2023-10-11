@@ -6,13 +6,13 @@ ContentDisplay;
 const AboutMe = () => {
   return (
     <ContentDisplay
-      className="col-span-2 w-full min-[560px]:col-span-4 h-64"
+      className="col-span-2 w-full min-[560px]:col-span-4"
       symbol={<User />}
       name="About Me"
       description="Introduction"
     >
       <div className="line-clamp-1 text-ellipsis text-sm text-gray-11 px-4 py-4">
-        <p className="overflow-auto">
+        <p className="overflow-auto h-max">
           I am a full-stack developer with experience in React.js and Vue.js. I
           also have a strong interest in the blockchain technology and web3. I
           was a previous fullstack developer at Deloitte and I took a year off
