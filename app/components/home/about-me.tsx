@@ -6,7 +6,7 @@ ContentDisplay;
 const AboutMe = () => {
   return (
     <ContentDisplay
-      className="col-span-2 w-full min-[560px]:col-span-4"
+      className="col-span-2 w-full min-[560px]:col-span-4 h-64"
       symbol={<User />}
       name="About Me"
       description="Introduction"
