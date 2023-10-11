@@ -11,7 +11,7 @@ const AboutMe = () => {
       name="About Me"
       description="Introduction"
     >
-      <div className="line-clamp-1 text-ellipsis text-sm text-gray-11 px-4 py-4">
+      <div className="text-sm text-gray-11 px-4 py-4">
         <p className="overflow-auto">
           I am a full-stack developer with experience in React.js and Vue.js. I
           also have a strong interest in the blockchain technology and web3. I
