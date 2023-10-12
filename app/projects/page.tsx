@@ -4,6 +4,8 @@ import ProfileHeader from "@components/ui/header";
 import ContainerLayout from "@components/layouts/container";
 import InProgressImage from "../../public/aboutme-option3.webp";
 import Image from "next/image";
+import { ChevronLeft } from "lucide-react";
+import Button from "@components/ui/button/index";
 
 export const metadata = {
   title: "Projects",
@@ -22,6 +24,14 @@ export default function AboutMe() {
           src={InProgressImage}
           alt="image"
         />
+        <Button
+          variant="secondary"
+          intent="primary"
+          href="/"
+          leftIcon={<ChevronLeft />}
+        >
+          Return home
+        </Button>
       </ContainerLayout>
     </Base>
   );

@@ -43,7 +43,7 @@ const Running = async () => {
     <ContentDisplay
       className="h-64 col-span-2 w-full min-[560px]:col-span-4"
       name="Running"
-      description="I run a lot"
+      description="Getting better at running"
       symbol={<Footprints />}
     >
       <RunningDetails runMonthlyData={runData} dailyData={dailyRunData} />
