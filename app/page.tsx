@@ -9,7 +9,7 @@ export const dynamic = "force-dynamic";
 export default async function Home() {
   return (
     <>
-      <Base subtitle="Home" pageSlug="/">
+      <Base pageSlug="/">
         <ContainerLayout className="flex flex-col space-y-4">
           <ProfileHeader />
           <Contents />

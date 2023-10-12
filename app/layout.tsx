@@ -6,7 +6,10 @@ import { Analytics } from "@vercel/analytics/react";
 const inter = Inter({ variable: "--inter-font", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Kent Miguel",
+  title: {
+    default: "Kent Miguel | Home",
+    template: "Kent Miguel | %s",
+  },
   description: "Kent Miguel Personal Website",
 };
 

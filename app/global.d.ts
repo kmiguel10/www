@@ -38,12 +38,7 @@ declare global {
     selected?: PageSlug;
   };
 
-  export type SeoBaseProps = {
-    title?: string;
-    subtitle?: string;
-  };
-
-  type BaseLayoutProps = SeoBaseProps & {
+  type BaseLayoutProps = {
     pageSlug?: PageSlug;
     children?: ReactNode;
   };
