@@ -8,9 +8,9 @@ const inter = Inter({ variable: "--inter-font", subsets: ["latin"] });
 export const metadata: Metadata = {
   title: {
     default: "Kent Miguel | Home",
-    template: "Kent Miguel | %s",
+    template: "Kent | %s",
   },
-  description: "Kent Miguel Personal Website",
+  description: "Kent Miguel's Personal Website",
 };
 
 export default function RootLayout({
