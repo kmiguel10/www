@@ -18,11 +18,16 @@ const ResumeContent = () => {
               <div className="font-medium ">
                 Full Stack Developer , Smart Contract Security Engineer
               </div>
+              <span className="hidden md:block mt-0.5 text-sm text-gray-11 md:mt-1 md:text-small">
+                July 2022 - Present
+              </span>
+            </div>
+            <div className="space-x-2 md:hidden">
               <span className="mt-0.5 text-sm text-gray-11 md:mt-1 md:text-small">
                 July 2022 - Present
               </span>
             </div>
-            <div className="hidden space-x-2 md:flex">
+            <div className="space-x-2 md:flex">
               <span className="mt-0.5 text-sm text-gray-11 md:mt-1 md:text-small">
                 Part-time
               </span>
@@ -49,6 +54,11 @@ const ResumeContent = () => {
           <div className="collapse-title text-md">
             <div className="flex w-full items-center md:flex-row md:justify-between">
               <div className="font-medium ">Deloitte</div>
+              <span className="mt-0.5 text-sm text-gray-11 md:mt-1 md:text-small hidden md:block">
+                November 2020 - July 2022
+              </span>
+            </div>
+            <div className="space-x-2 md:hidden">
               <span className="mt-0.5 text-sm text-gray-11 md:mt-1 md:text-small">
                 November 2020 - July 2022
               </span>
@@ -57,6 +67,7 @@ const ResumeContent = () => {
               Solution Specialist - Full Stack Developer
             </span>
           </div>
+
           <div className="collapse-content">
             <ul className="list-disc px-4">
               <li>
@@ -86,6 +97,11 @@ const ResumeContent = () => {
               <div className="font-medium ">
                 Propulsion Technologies Internation
               </div>
+              <span className="hidden md:block mt-0.5 text-sm text-gray-11 md:mt-1 md:text-small">
+                July 2018 - June 2020
+              </span>
+            </div>
+            <div className="space-x-2 md:hidden">
               <span className="mt-0.5 text-sm text-gray-11 md:mt-1 md:text-small">
                 July 2018 - June 2020
               </span>

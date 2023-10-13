@@ -3,7 +3,7 @@ import ContentDisplay from "../layouts/content-display";
 import { Hand, Mail } from "lucide-react";
 import Button from "../ui/button";
 
-const MySocials = () => {
+export default function MySocials() {
   return (
     <ContentDisplay
       className="w-full min-[960px]:w-64 col-span-2"
@@ -28,6 +28,4 @@ const MySocials = () => {
       </div>
     </ContentDisplay>
   );
-};
-
-export default MySocials;
+}

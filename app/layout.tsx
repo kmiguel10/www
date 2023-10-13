@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     default: "Kent Miguel | Home",
     template: "Kent | %s",
   },
-  description: "Kent Miguel Personal Website",
+  description: "Kent Miguel's Personal Website",
 };
 
 export default function RootLayout({
