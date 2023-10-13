@@ -1,7 +1,9 @@
 import React from "react";
 import { User } from "lucide-react";
 import ContentDisplay from "../layouts/content-display";
+import Button from "../ui/button";
 ContentDisplay;
+import { ScrollText } from "lucide-react";
 
 const AboutMe = () => {
   return (
@@ -10,6 +12,11 @@ const AboutMe = () => {
       symbol={<User />}
       name="About Me"
       description="Introduction"
+      button={
+        <Button size="sm" href="/resume" rightIcon={<ScrollText />}>
+          Resume
+        </Button>
+      }
     >
       <div className="text-sm text-gray-11 px-4 py-4">
         <p className="overflow-auto">
