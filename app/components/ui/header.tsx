@@ -75,6 +75,8 @@ const ProfileHeader = () => {
         <Button
           size="md"
           className="w-full"
+          intent="success"
+          variant="primary"
           href="https://github.com/kmiguel10"
           leftIcon={<Github />}
           newTab
