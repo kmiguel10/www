@@ -1,9 +1,14 @@
+"use client";
+
 import React from "react";
 import ProfileAvatar from "./profile-avatar";
 import Button from "./button";
-import { Github, Twitter, Linkedin } from "lucide-react";
+import { Github, Download, Linkedin } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 const ProfileHeader = () => {
+  const currentPath = usePathname();
+
   return (
     <div className="flex flex-col items-center rounded-xl border border-gray-6 bg-gray-2 p-3 md:flex-row md:justify-between md:rounded-2xl md:p-6">
       <div className="flex w-full items-center">
@@ -34,13 +39,29 @@ const ProfileHeader = () => {
         <Button
           href="https://github.com/kmiguel10"
           leftIcon={<Github />}
+          intent="success"
+          variant="primary"
           newTab
         >
           GitHub
         </Button>
+        {currentPath === "/resume" && (
+          <Button
+            size="md"
+            className="w-full"
+            leftIcon={<Download />}
+            intent="success"
+            variant="outline"
+            newTab
+          >
+            <a href="/kentmiguel.pdf" download>
+              Resume
+            </a>
+          </Button>
+        )}
       </div>
+      {/* Links (Mobile) */}
       <div className="mt-4 flex w-full space-x-2 md:hidden">
-        {" "}
         <Button
           size="md"
           intent="primary"
@@ -60,6 +81,20 @@ const ProfileHeader = () => {
         >
           GitHub
         </Button>
+        {currentPath === "/resume" && (
+          <Button
+            size="md"
+            className="w-full"
+            leftIcon={<Download />}
+            intent="success"
+            variant="outline"
+            newTab
+          >
+            <a href="/kentmiguel.pdf" download>
+              Resume
+            </a>
+          </Button>
+        )}
       </div>
     </div>
   );
