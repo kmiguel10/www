@@ -11,7 +11,7 @@ main {
 }
 
 * {
-  @apply selection:bg-[#2200ff] selection:text-white;
+  @apply selection:bg-[#63dcb4] selection:text-white;
   box-sizing: border-box;
 }
 

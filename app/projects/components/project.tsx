@@ -11,6 +11,7 @@ import {
   CircleDollarSign,
   Swords,
   ExternalLink,
+  Landmark,
 } from "lucide-react";
 import Button from "@components/ui/button/index";
 import type { ReactNode } from "react";
@@ -28,7 +29,15 @@ type ProjectProps = {
 
 const data: ProjectProps[] = [
   {
-    id: 1,
+    id: 7,
+    symbol: <Landmark />,
+    name: "Good Congress",
+    description: "",
+    buttonRef: "https://github.com/kmiguel10/good-congress",
+    body: "Watch the current status of elected representatives, voting history, and fundraising activities",
+  },
+  {
+    id: 6,
     symbol: <UserCircle2 />,
     name: "Personal Website",
     description: "",
@@ -36,7 +45,7 @@ const data: ProjectProps[] = [
     body: "My personal website that showcases my profile",
   },
   {
-    id: 2,
+    id: 5,
     symbol: <Twitter />,
     name: "Blue Bird",
     description: "",
@@ -44,7 +53,7 @@ const data: ProjectProps[] = [
     body: "A twitter clone built with Next.js with Tailwind CSS, and supabase",
   },
   {
-    id: 3,
+    id: 4,
     symbol: <KanbanSquare />,
     name: "Issue Tracker",
     description: "",
@@ -52,7 +61,7 @@ const data: ProjectProps[] = [
     body: "A a full-stack App with Next.js, Tailwind, Radix UI, and Prisma",
   },
   {
-    id: 4,
+    id: 3,
     symbol: <Vote />,
     name: "DApp Voting",
     description: "",
@@ -61,7 +70,7 @@ const data: ProjectProps[] = [
     body: "A Decentralized Ranked-Choice Voting System built with Solidity and Hardhat",
   },
   {
-    id: 5,
+    id: 2,
     symbol: <CircleDollarSign />,
     name: "DApp Bounty",
     description: "",
@@ -70,7 +79,7 @@ const data: ProjectProps[] = [
   },
 
   {
-    id: 6,
+    id: 1,
     symbol: <Swords />,
     name: "Buidl Guidl",
     description: "",
