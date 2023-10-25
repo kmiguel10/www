@@ -1,15 +1,14 @@
 "use client";
 
-import * as Tabs from "@radix-ui/react-tabs";
-import RunningBarChart from "./running-bar-chart";
-import RunningHeatMap from "./running-heatmap";
-import clsx from "clsx";
-import Button from "@components/ui/button";
+import { LENGTH_UNITS } from "@/lib/constants/units";
 import IconButton from "@components/ui/icon-button";
+import Tooltip from "@components/ui/tooltip";
+import * as Tabs from "@radix-ui/react-tabs";
+import clsx from "clsx";
 import { ArrowLeftRight, BarChart, Grid } from "lucide-react";
 import { useState } from "react";
-import { LENGTH_UNITS } from "@/lib/constants/units";
-import Tooltip from "@components/ui/tooltip";
+import RunningBarChart from "./running-bar-chart";
+import RunningHeatMap from "./running-heatmap";
 
 export default function RunningDetails({
   runMonthlyData,
