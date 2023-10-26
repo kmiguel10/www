@@ -55,9 +55,9 @@ const data: ProjectProps[] = [
   {
     id: 4,
     symbol: <KanbanSquare />,
-    name: "https://github.com/kmiguel10/issue-tracker",
+    name: "Issue Tracker",
     description: "",
-    buttonRef: "",
+    buttonRef: "https://github.com/kmiguel10/issue-tracker",
     body: "A a full-stack App with Next.js, Tailwind, Radix UI, and Prisma",
   },
   {
