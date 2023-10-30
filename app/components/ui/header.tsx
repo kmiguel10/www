@@ -10,8 +10,9 @@ const ProfileHeader = () => {
   const currentPath = usePathname();
 
   return (
-    <div className="flex flex-col items-center rounded-xl border border-gray-6 bg-gray-2 p-3 md:flex-row md:justify-between md:rounded-2xl md:p-6">
-      <div className="flex w-full items-center">
+    <div className="relative flex flex-col items-center rounded-xl border border-gray-6 bg-gray-2 p-3 md:flex-row md:justify-between md:rounded-2xl md:p-6">
+      <div className="jumbo absolute inset-0 z-0 opacity-50"></div>
+      <div className="relative z-10 h-full flex w-full items-center">
         {/* Avatara (desktop) */}
         <ProfileAvatar className="mr-4 hidden md:block" size={56} />
         {/* Avatara (mobile) TODO */}
