@@ -3,9 +3,9 @@ import NavBar from "@components/ui/nav-bar/nav-bar";
 
 export default function Base({ pageSlug, children }: BaseLayoutProps) {
   return (
-    <>
+    <div>
       <NavBar selected={pageSlug} />
       <main className="relative flex grow flex-col">{children}</main>
-    </>
+    </div>
   );
 }
