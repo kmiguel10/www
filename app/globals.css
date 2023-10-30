@@ -7,7 +7,7 @@ body,
 main {
   @apply bg-gray-1 text-gray-12;
   font-weight: 300;
-  height: 93vh;
+  height: 100%;
 }
 
 * {
