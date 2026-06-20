@@ -15,7 +15,7 @@ export type ExternalLink = {
 /**
  * Type for a page slug
  */
-export type PageSlug = "/" | "/resume" | "/projects" | "/about" | "/blog";
+export type PageSlug = "/" | "/resume" | "/projects" | "/about" | "/blog" | "/fitness";
 
 /**
  * Type for an external page

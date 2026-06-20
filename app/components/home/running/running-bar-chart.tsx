@@ -188,14 +188,14 @@ export default function RunningBarChart({
           />
           <Bar
             dataKey="value"
-            shape={({ x, y, width, height }) => (
+            shape={(props: any) => { const { x, y, width, height } = props; return (
               <path
                 className="fill-blue-9"
                 d={`M${x} ${y + height}V${2 + y}q0-2 2-2h${width - 4}q2 0 2 2v${
                   height - 2
                 }z`}
               />
-            )}
+            ); }}
           />
         </BarChart>
       </ResponsiveContainer>
