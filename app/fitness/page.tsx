@@ -1,9 +1,8 @@
-import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
-import { cookies } from "next/headers";
 import Base from "@components/layouts/base";
 import ProfileHeader from "@components/ui/header";
 import ContainerLayout from "@components/layouts/container";
 import FitnessDashboard from "./components/fitness-dashboard";
+import { fitnessSupabase } from "./lib/supabase";
 
 export const dynamic = "force-dynamic";
 
@@ -24,11 +23,7 @@ export interface FitnessActivity {
 }
 
 export default async function FitnessPage() {
-  // Uses the same Supabase project as the rest of the www site.
-  // Ensure your Supabase project has the `activities` table from strava-garmin-mcp.
-  const supabase = createServerComponentClient<any>({ cookies });
-
-  const { data } = await supabase
+  const { data } = await fitnessSupabase
     .from("activities")
     .select(
       "id, source, name, sport_type, start_time, duration_seconds, distance_meters, calories, avg_heart_rate"
